@@ -10,6 +10,10 @@
 
 - Enable kotlin in all modules. ([#12716](https://github.com/expo/expo/pull/12716) by [@wschurman](https://github.com/wschurman))
 
+### 💡 Others
+
+- Built with Java 8 to especially fix Android instrumented test build error. ([#12893](https://github.com/expo/expo/pull/12893) by [@kudo](https://github.com/kudo))
+
 ## 10.1.0 — 2021-03-10
 
 ### 🎉 New features
@@ -20,9 +24,7 @@
 
 - Data saved with `expo-secure-store` is no longer lost upon ejecting, **if you first upgrade your app to SDK 41 before ejecting**. ([#11309](https://github.com/expo/expo/pull/11309) by [@cruzach](https://github.com/cruzach))
 
-> On Android, all of your `SecureStore` data will be migrated on app start-up. On iOS, keys and their associated data will be migrated whenever you call `getItemAsync` on that key. This means that any keys you don't `get` while on SDK 41 will **not** be migrated.## 10.0.0 — 2021-01-15### 🛠 Breaking changes
-
-- Dropped support for iOS 10.0 ([#11344](https://github.com/expo/expo/pull/11344) by [@tsapeta](https://github.com/tsapeta))
+> On Android, all of your `SecureStore` data will be migrated on app start-up. On iOS, keys and their associated data will be migrated whenever you call `getItemAsync` on that key. This means that any keys you don't `get` while on SDK 41 will **not** be migrated.## 10.0.0 — 2021-01-15### 🛠 Breaking changes- Dropped support for iOS 10.0 ([#11344](https://github.com/expo/expo/pull/11344) by [@tsapeta](https://github.com/tsapeta))
 
 ## 9.3.0 — 2020-11-17
 

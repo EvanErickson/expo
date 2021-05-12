@@ -13,6 +13,7 @@
 ### 💡 Others
 
 - Migrated module interfaces from `unimodules-sensors-interface` to `expo-modules-core`. ([#12888](https://github.com/expo/expo/pull/12888) by [@tsapeta](https://github.com/tsapeta))
+- Built with Java 8 to especially fix Android instrumented test build error. ([#12893](https://github.com/expo/expo/pull/12893) by [@kudo](https://github.com/kudo))
 
 ## 10.1.2 — 2021-04-13
 

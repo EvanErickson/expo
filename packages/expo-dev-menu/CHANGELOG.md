@@ -10,6 +10,8 @@
 
 ### 💡 Others
 
+- Built with Java 8 to especially fix Android instrumented test build error. ([#12893](https://github.com/expo/expo/pull/12893) by [@kudo](https://github.com/kudo))
+
 ## 0.5.1 — 2021-05-12
 
 ### 🐛 Bug fixes
