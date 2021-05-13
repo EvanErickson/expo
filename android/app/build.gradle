@@ -70,6 +70,26 @@ android {
       }
     }
   }
+  flavorDimensions "versioning"
+  productFlavors {
+    versioned {
+      dimension "versioning"
+      manifestPlaceholders = [appLabel:"@string/versioned_app_name"]
+    }
+    unversioned {
+      dimension "versioning"
+      manifestPlaceholders = [appLabel:"@string/unversioned_app_name"]
+    }
+  }
+
+  /*variantFilter { variant ->
+    def flavorNames = variant.flavors*.name
+    def typeNames = variant.buildTypes*.name
+    if (flavorNames.contains('unversioned') && typeNames.contains('release')) {
+      setIgnore(true)
+    }
+  }
+*/
   lintOptions {
     abortOnError false
   }
@@ -187,17 +207,17 @@ dependencies {
 
 
   // BEGIN_SDK_41
-  implementation(project(':expoview-abi41_0_0'))
+  versionedImplementation(project(':expoview-abi41_0_0'))
   // END_SDK_41
 
 
   // BEGIN_SDK_40
-  implementation(project(':expoview-abi40_0_0'))
+  versionedImplementation(project(':expoview-abi40_0_0'))
   // END_SDK_40
 
 
   // BEGIN_SDK_39
-  implementation(project(':expoview-abi39_0_0'))
+  versionedImplementation(project(':expoview-abi39_0_0'))
   // END_SDK_39
 
   // This is not needed in shell apps, the Amplitude module will include this dep if installed
