@@ -13,6 +13,7 @@ version = '41.0.0'
 //Upload android library to maven with javadoc and android sources
 configurations {
   deployerJars
+  versioned
 }
 
 //Creating sources with comments
@@ -67,7 +68,11 @@ repositories {
   mavenCentral()
 }
 
+apply from: "${rootProject.projectDir}/flavors.gradle"
+
 android {
+  with flavorConfig
+
   compileSdkVersion safeExtGet("compileSdkVersion", 30)
 
   compileOptions {
@@ -109,15 +114,6 @@ android {
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-    }
-  }
-  flavorDimensions "versioning"
-  productFlavors {
-    versioned {
-      dimension "versioning"
-    }
-    unversioned {
-      dimension "versioning"
     }
   }
 
